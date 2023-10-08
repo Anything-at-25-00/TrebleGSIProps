@@ -1,3 +1,3 @@
-## SafetyNet sensitive props
+## Treble GSI Props
 
-Reset sensitive properties to safe state and try to bypass Safetynet / Play Integrity
+Reset properties to vendor ones for some Treble GSI ROMs. Based on sensitive_props by HuskyDG and some parts from phh copyprop in rw-system.sh 
