@@ -1,6 +1,6 @@
-id=sensitive_props
-name=SafetyNet sensitive props
-version=v3
-versionCode=3
-author=HuskyDG
-description=Reset sensitive properties to safe state and try to bypass Safetynet / Play Integrity
+id=treble_vendor_props
+name=Treble GSI Vendor Props
+version=v1
+versionCode=1
+author=Ren(@shirayuki_39)
+description=Reset properties to vendor ones for Treble GSI ROMs. Based on HuskyDG's sensitive_props and some code from phh rw-system.sh

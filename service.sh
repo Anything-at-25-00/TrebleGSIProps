@@ -1,4 +1,3 @@
-MAGISKTMP="$(magisk --path)" || MAGISKTMP=/sbin
 MODPATH="${0%/*}"
 
 # Use Magisk Delta feature to dynamic patch prop
