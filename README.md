@@ -6,6 +6,7 @@ I'm here to introduce you the greatest thief [@XNEOFF](https://github.com/XNEOFF
 So, what did he do?
 
 * He stole this module with absolute zero modifications to the main code, just replaced my name with his and removed the credits to phh and HuskyDG on the description(where most of the code came from)
+* He probably also stole other modules and flashable zips
 
 
 ## Credits
