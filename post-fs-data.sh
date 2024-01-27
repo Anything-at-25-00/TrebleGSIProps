@@ -9,6 +9,7 @@ if [ ! -e "$MAGISKTMP/.magisk/mirror/sepolicy.rules/$MODNAME/sepolicy.rule" ] &&
 fi
 
 . "$MODDIR/copyprop.sh"
+. "$MODDIR/resetprop.sh"
 
     copyprop ro.build.device ro.vendor.build.device
     copyprop ro.system.build.fingerprint ro.vendor.build.fingerprint
@@ -64,3 +65,33 @@ fi
     copyprop ro.product.product.manufacturer ro.product.vendor.manufacturer
     copyprop ro.product.system_ext.manufacturer ro.product.vendor.manufacturer
 
+replace_value_resetprop ro.build.fingerprint userdebug user
+replace_value_resetprop ro.build.fingerprint "aosp_" ""
+replace_value_resetprop ro.build.fingerprint "lineage_" ""
+replace_value_resetprop ro.build.fingerprint test-keys release-keys
+replace_value_resetprop ro.build.description userdebug user
+replace_value_resetprop ro.build.description "aosp_" ""
+replace_value_resetprop ro.build.description "lineage_" ""
+replace_value_resetprop ro.build.description test-keys release-keys
+replace_value_resetprop ro.build.flavor "aosp_" ""
+replace_value_resetprop ro.product.name "aosp_" ""
+replace_value_resetprop ro.build.flavor "lineage_" ""
+replace_value_resetprop ro.product.name "lineage_" ""
+
+for prefix in system vendor system_ext product oem odm vendor_dlkm odm_dlkm; do
+    check_resetprop ro.${prefix}.build.type user
+    check_resetprop ro.${prefix}.build.tags release-keys
+    replace_value_resetprop ro.${prefix}.build.fingerprint userdebug user
+    replace_value_resetprop ro.${prefix}.build.fingerprint "aosp_" ""
+    replace_value_resetprop ro.${prefix}.build.fingerprint "lineage_" ""
+    replace_value_resetprop ro.${prefix}.build.fingerprint "treble_" ""
+    replace_value_resetprop ro.${prefix}.build.fingerprint test-keys release-keys
+    replace_value_resetprop ro.${prefix}.build.description userdebug user
+    replace_value_resetprop ro.${prefix}.build.description "aosp_" ""
+    replace_value_resetprop ro.${prefix}.build.description "lineage_" ""
+    replace_value_resetprop ro.${prefix}.build.description "treble_" ""
+    replace_value_resetprop ro.${prefix}.build.description test-keys release-keys
+    replace_value_resetprop ro.product.${prefix}.name "aosp_" ""
+    replace_value_resetprop ro.product.${prefix}.name "lineage_" ""
+    replace_value_resetprop ro.product.${prefix}.name "treble_" ""
+done
