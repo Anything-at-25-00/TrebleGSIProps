@@ -1,6 +1,6 @@
 id=treble_vendor_props
 name=Treble GSI Vendor Props
-version=v1.1
+version=v1.2
 versionCode=1
 author=OkBuddyGSI
 description=Reset properties to vendor ones for Treble GSI ROMs. Credits to HuskyDG(for the module base) and phhusson(for the code needed for pulling props from vendor)
