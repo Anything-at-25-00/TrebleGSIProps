@@ -84,14 +84,11 @@ for prefix in system vendor system_ext product oem odm vendor_dlkm odm_dlkm; do
     replace_value_resetprop ro.${prefix}.build.fingerprint userdebug user
     replace_value_resetprop ro.${prefix}.build.fingerprint "aosp_" ""
     replace_value_resetprop ro.${prefix}.build.fingerprint "lineage_" ""
-    replace_value_resetprop ro.${prefix}.build.fingerprint "treble_" ""
     replace_value_resetprop ro.${prefix}.build.fingerprint test-keys release-keys
     replace_value_resetprop ro.${prefix}.build.description userdebug user
     replace_value_resetprop ro.${prefix}.build.description "aosp_" ""
     replace_value_resetprop ro.${prefix}.build.description "lineage_" ""
-    replace_value_resetprop ro.${prefix}.build.description "treble_" ""
     replace_value_resetprop ro.${prefix}.build.description test-keys release-keys
     replace_value_resetprop ro.product.${prefix}.name "aosp_" ""
     replace_value_resetprop ro.product.${prefix}.name "lineage_" ""
-    replace_value_resetprop ro.product.${prefix}.name "treble_" ""
 done
