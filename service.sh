@@ -33,6 +33,7 @@ check_resetprop vendor.boot.vbmeta.device_state locked
 check_resetprop vendor.boot.verifiedbootstate green
 check_resetprop sys.oem_unlock_allowed 0
 check_resetprop init.svc.flash_recovery stopped
+check_resetprop ro.build.selinux 0
 
 maybe_resetprop ro.bootmode recovery unknown
 maybe_resetprop ro.boot.mode recovery unknown
